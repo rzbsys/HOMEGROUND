@@ -1,0 +1,52 @@
+.TeamInfoFrame {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15%;
+    margin: 80px 0px;
+}
+
+.TeamInfoLogo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.TeamInfoLogo > h2 {
+    color: #A9A9A9;
+}
+
+.TeamInfoText {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.HighLight {
+    background: linear-gradient(to top, #40CD85 50%, transparent 50%);
+}
+
+.TagBox {
+    max-width: 300px;
+}
+
+.Tag {
+    padding: 8px 30px;
+    display: inline-block;
+    background-color: #F5F5F5;
+    color: #646464;
+    border-radius: 100px;
+    margin-top: 8px;
+    margin-left: 8px;
+}
+
+.Youtube {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.Youtube > h4 {
+    color: #FC3832;
+}

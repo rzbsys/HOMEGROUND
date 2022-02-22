@@ -12,7 +12,42 @@ import Image11 from "images/image 11.png";
 import Image12 from "images/image 12.png";
 import Image13 from "images/image 13.png";
 
+
+import Image14 from "images/image 14.png";
+import Image15 from "images/image 15.png";
+import Image16 from "images/image 16.png";
+
+
 const ImageList = [Image1, Image2, Image3, Image4, Image5, Image6, Image7, Image8, Image9, Image10, Image11, Image12, Image13];
 
 
-export {ImageList};
+const MemberList = [
+    {
+        "Name": "지하",
+        "Position": "대표",
+        "Image": Image14,
+        "Color": "#FED3E7",
+        "Detail": ["세부정보 없음"],
+    }, {
+        "Name": "마르크",
+        "Position": "부대표",
+        "Image": Image15,
+        "Color": "#430505",
+        "Detail": ["성우부분 최고 책임자", "성우부 트레이너"],
+    }, {
+        "Name": "희날",
+        "Position": "성우부 매니저",
+        "Image": Image16,
+        "Color": "#9AD8C3",
+        "Detail": ["세부정보 없음"],
+    }, {
+        "Name": "희날",
+        "Position": "성우부 매니저",
+        "Image": "",
+        "Color": "",
+        "Detail": ["세부정보 없음"],
+    }
+]
+
+const YoutubeLink = "https://www.youtube.com/channel/UCEkO64sYQRgwhH63HgOxjkw";
+export { ImageList, MemberList, YoutubeLink };

@@ -1,0 +1,74 @@
+.ActivitiesGrid {
+    margin-top: 50px;
+    width: calc(100% - 250px);
+    position: relative;
+    left: 50%;
+    margin-left: calc(-1 * (100% - 250px) / 2);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    margin-bottom: 80px;
+}
+
+.Video {
+    width: 340px;
+    height: 190px;
+    background-color: rgb(250, 250, 250);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.Video > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.VideoFrame > h1 {
+    width: 340px;
+    font-size: 25px;
+    margin-top: 5px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.VideoFrame > p {
+    margin-top: 5px;
+    color: #BCBCBC;
+}
+
+.VideoFrame {
+    margin-bottom: 60px;
+    cursor: pointer;
+}
+
+.LoadVideo {
+    @extend .Video;
+    background: linear-gradient(45deg, rgb(230, 230, 230), rgb(240, 240, 240)) !important;
+}
+
+.VideoShadow {
+    width: 100%;
+    background-color: red;
+    height: 200px;
+    position: absolute;
+    bottom: 0px;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1), rgba(255, 255, 255, 1));
+}
+
+.VideoExtendButton {
+    width: 180px;
+    height: 50px;
+    position: absolute;
+    bottom: 170px;
+    z-index: 2;
+    border-radius: 100px;
+    border: 0px;
+    background-color: #40CD85;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+}
