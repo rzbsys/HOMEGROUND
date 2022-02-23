@@ -21,3 +21,9 @@ hr {
   margin-bottom: 80px;
   background-color: #EFEFEF;
 }
+
+@media (min-width: 320px) and (max-width: 480px) {
+  hr {
+    margin-bottom: 20px;
+  }
+}

@@ -4,7 +4,7 @@ import SepImage from "images/Polygon.svg";
 
 function SectionTitle({KorTitle, EngTitle}) {
     return (
-        <div className="SectionTitle">
+        <div className="SectionTitle" id={EngTitle.replaceAll(" ", "")}>
             <img src={SepImage} alt="별별" />
             <div className="SectionTitleText">
                 <h1>{KorTitle}</h1>

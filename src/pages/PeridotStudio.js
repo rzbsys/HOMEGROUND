@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import NavBar from "components/NavBar";
 import TopBackground from "components/TopBackground";
 import Section from "components/Section";
@@ -7,14 +7,15 @@ import MemberInfo from "components/MemberInfo";
 import Activities from "components/Activities";
 import Footer from "components/Footer";
 import Contact from "components/Contact";
+import YoutubeModal from "components/YoutubeModal";
+
+
 import { GetYoutubeVideos } from "apis/YoutubeAPI";
 import {ImageList, MemberList, YoutubeLink} from "apis/PeridotStudio";
-import { useAsync } from "react-async"
 
 function PeridotStudio() {
-
-    const { data, error, isLoading } = useAsync({ promiseFn: GetYoutubeVideos });
-
+    const [IsModelOpen, SetIsModelOpen] = useState(false);
+    const [ModalInfo, SetModalInfo] = useState([]);
     return (
         <>
             <NavBar></NavBar>
@@ -28,10 +29,13 @@ function PeridotStudio() {
             <hr />
             <MemberInfo MemberList={MemberList}></MemberInfo>
             <hr />
-            <Activities data={data} error={error} isLoading={isLoading}></Activities>
+            <Activities SetIsModelOpen={SetIsModelOpen} SetModalInfo={SetModalInfo} GetYoutubeVideos={GetYoutubeVideos}></Activities>
             <hr />
             <Contact></Contact>
             <Footer></Footer>
+            {IsModelOpen
+                && <YoutubeModal SetIsModelOpen={SetIsModelOpen} ModalInfo={ModalInfo}></YoutubeModal>
+            }
         </>
     )
 }

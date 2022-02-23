@@ -6,6 +6,8 @@
     gap: 30px;
     align-items: center;
     justify-content: center;
+    text-align: center;
+    white-space: nowrap;
 }
 
 .SectionTitleText {
@@ -17,4 +19,12 @@
 
 .SectionTitleText > h5 {
     color: #939393;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .SectionTitle {
+        transform: scale(0.8);
+        margin-top: 40px;
+    }
+
 }

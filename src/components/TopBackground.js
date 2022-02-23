@@ -1,5 +1,6 @@
-import React, {useEffect, useRef, } from "react";
+import React, {useEffect, useRef } from "react";
 import "styles/TopBackground.scss";
+import { Link } from "react-scroll"
 
 function TopBackground({ ImageList }) {
 
@@ -25,8 +26,7 @@ function TopBackground({ ImageList }) {
 
 
     return (
-        <section className="TopBackground">
-
+        <section className="TopBackground" id="Home">
             <div className="TopBackgroundFrame">
                 <div className="TopBackgroundLine" ref={Line1}>
                     <img src={ImageList[0]} alt="" />
@@ -56,9 +56,13 @@ function TopBackground({ ImageList }) {
                 </div>
 
             </div>
-            {/* <img src={BackgroundImage} alt="" /> */}
             <div className="TopBackgroundWhiteShadow"></div>
-            <h1 className="TopBackgroundTitle">라디오드라마를 제작하며,<br/>‘성우’를 양성하는 곳.</h1>
+            <h1 className="TopBackgroundTitle">
+                라디오드라마를 제작하며,<br/>‘성우’를 양성하는 곳<br/>
+                <Link to="Section" smooth offset={-100}>
+                    <button className="AboutUsButton w_4">About US</button>                
+                </Link>
+            </h1>
         </section>
     )
 }

@@ -1,9 +1,9 @@
 .ActivitiesGrid {
     margin-top: 50px;
-    width: calc(100% - 250px);
+    width: calc(100% - 100px);
     position: relative;
     left: 50%;
-    margin-left: calc(-1 * (100% - 250px) / 2);
+    margin-left: calc(-1 * (100% - 100px) / 2);
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     justify-items: center;
@@ -71,4 +71,69 @@
     font-size: 20px;
     color: white;
     cursor: pointer;
+}
+
+// 태블릿
+@media (min-width: 768px) and (max-width: 1024px) {
+    .ActivitiesGrid {
+        grid-template-columns: repeat(2, 1fr);
+        width: calc(100% - 50px);
+        left: 50%;
+        margin-left: calc(-1 * (100% - 50px) / 2);
+        grid-row-gap: 0px;
+    }
+    .Hide-tablet {
+        display: none;
+    }   
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .ActivitiesGrid {
+        grid-template-columns: 1fr;
+        width: 100%;
+        left: 0px;
+        margin-left: 0px;
+        margin-bottom: 20px;
+    }
+
+    .VideoFrame {
+        margin-bottom: 20px;
+    }
+
+
+    .VideoFrame {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        h1 {
+            width: calc(100vw - 80px);
+            font-size: 20px;
+        }
+        p {
+            width: calc(100vw - 80px);
+        }
+    }
+
+    .Video {
+        width: calc(100vw - 80px);
+        height: 160px;
+        object-fit: cover;
+    }
+
+    .Hide-tablet {
+        display: none;
+    }   
+
+    .Hide-mobile {
+        display: none;
+    }
+
+    .VideoExtendButton {
+        bottom: 120px;
+        width: 120px;
+        height: 40px;
+        font-size: 15px;
+    }
+
 }
