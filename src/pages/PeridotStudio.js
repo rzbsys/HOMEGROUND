@@ -8,10 +8,10 @@ import Activities from "components/Activities";
 import Footer from "components/Footer";
 import Contact from "components/Contact";
 import YoutubeModal from "components/YoutubeModal";
-
-
+import "styles/Animation.scss";
+import { AnimationOnScroll } from 'react-animation-on-scroll';
 import { GetYoutubeVideos } from "apis/YoutubeAPI";
-import {ImageList, MemberList, YoutubeLink} from "apis/PeridotStudio";
+import { ImageList, MemberList, YoutubeLink } from "apis/PeridotStudio";
 
 function PeridotStudio() {
     const [IsModelOpen, SetIsModelOpen] = useState(false);
@@ -19,19 +19,46 @@ function PeridotStudio() {
     return (
         <>
             <NavBar></NavBar>
-            <TopBackground ImageList={ImageList}></TopBackground>
+            <AnimationOnScroll animateIn="fadeInDown" offset={50} delay={1000} animateOnce >
+                <TopBackground ImageList={ImageList}></TopBackground>
+            </AnimationOnScroll>
+
+
+
             <Section>
-                <h1 className="w_4" style={{color:"#ADDDC5"}}>안녕하세요.</h1>
-                <h1 className="w_4" style={{color:"#85DFB2"}}>페리도트 스튜디오입니다.</h1>
-                <h1 className="w_4" style={{color:"#40CD85"}}>소개페이지에 오신것을 환영합니다!</h1>
+                <AnimationOnScroll animateIn="fadeInDown" offset={50} >
+                    <h1 className="w_4" style={{ color: "#ADDDC5" }}>안녕하세요.</h1>
+                </AnimationOnScroll>
+
+                <AnimationOnScroll animateIn="fadeInDown" offset={50} delay={200} >
+                    <h1 className="w_4" style={{ color: "#85DFB2" }}>페리도트 스튜디오입니다.</h1>
+                </AnimationOnScroll>
+
+                <AnimationOnScroll animateIn="fadeInDown" offset={50} delay={400} >
+                    <h1 className="w_4" style={{ color: "#40CD85" }}>소개페이지에 오신것을 환영합니다!</h1>
+                </AnimationOnScroll>
+
             </Section>
-            <TeamInfo YoutubeLink={YoutubeLink}></TeamInfo>
+
+            <AnimationOnScroll animateIn="fadeInDown" offset={100}>
+                <TeamInfo YoutubeLink={YoutubeLink}></TeamInfo>
+            </AnimationOnScroll>
             <hr />
-            <MemberInfo MemberList={MemberList}></MemberInfo>
+
+            <AnimationOnScroll animateIn="fadeInDown" offset={100}>
+                <MemberInfo MemberList={MemberList}></MemberInfo>
+            </AnimationOnScroll>
+            
             <hr />
-            <Activities SetIsModelOpen={SetIsModelOpen} SetModalInfo={SetModalInfo} GetYoutubeVideos={GetYoutubeVideos}></Activities>
+            <AnimationOnScroll animateIn="fadeInDown" offset={100}>
+                <Activities SetIsModelOpen={SetIsModelOpen} SetModalInfo={SetModalInfo} GetYoutubeVideos={GetYoutubeVideos}></Activities>
+            </AnimationOnScroll>
+            
             <hr />
-            <Contact></Contact>
+            <AnimationOnScroll animateIn="fadeInDown" offset={100}>
+                <Contact></Contact>
+            </AnimationOnScroll>
+            
             <Footer></Footer>
             {IsModelOpen
                 && <YoutubeModal SetIsModelOpen={SetIsModelOpen} ModalInfo={ModalInfo}></YoutubeModal>
