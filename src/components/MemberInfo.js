@@ -2,6 +2,8 @@ import React, { Fragment, useState } from "react";
 import Title from "components/Title";
 import "styles/MemberInfo.scss";
 import ErrImage from "images/ready.png";
+import Selector from "./Selector";
+
 
 function Member({ data }) {
     return (
@@ -17,42 +19,17 @@ function Member({ data }) {
     )
 }
 
-function RadioButtons({ names, ViewPart }) {
-    return (
-        <>
-            {
-                names.map((name, index) => {
-                    return (
-                        <Fragment key={index}>
-                            <input id={name} type="radio" name="membersel" value={index} defaultChecked={ViewPart===index} />
-                            <label htmlFor={name} className="MemberSelText w_3">{name}</label>
-                        </Fragment>
-                    )
-                })
-            }
-        </>
-    )
-}
-
 
 function MemberInfo({ MemberList }) {
+
     const [ViewPart, SetViewPart] = useState(0);
 
-    function ViewPartOnChange(e) {
-        SetViewPart(parseInt(e.target.value));
-    }
 
     return (
         <>
             <Title KorTitle="팀원 소개" EngTitle="Member Infomation"></Title>
-            <div className="MemberInfoSelector">
-                <fieldset onChange={ViewPartOnChange}>
-                    <RadioButtons names={["운영진", "트레이너", "성우부", "일러부", "작가/연출부", "작곡/음향부"]} ViewPart={ViewPart}></RadioButtons>
-                </fieldset>
-            </div>
-            <div className="MemberInfoSelectorLeftShadow"></div>
-            <div className="MemberInfoSelectorRightShadow"></div>
 
+            <Selector ViewPart={ViewPart} SetViewPart={SetViewPart} groupname="MemberInfo" names={["성우부", "운영진", "일러부", "작가연출부", "작곡음향", "트레이너"]}></Selector>
             <div className="MemberInfoGrid">
                 {MemberList[ViewPart].map((data, index) => {
                     return (

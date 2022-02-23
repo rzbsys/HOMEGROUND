@@ -8,7 +8,7 @@ function Contact() {
     return (
         <>
             <Title KorTitle="연락하기" EngTitle="Contact"></Title>
-            <h4 className="w_3" style={{ textAlign: "center", margin: "40px 0px" }}>오전 9시부터 오후 3시까지 연락가능합니다.</h4>
+            <h3 className="w_3" style={{ textAlign: "center", margin: "40px 0px" }}>오전 9시부터 오후 3시까지 연락가능합니다.</h3>
             <div className="ContactBox">
                 <div className="ContactBoxFrame">
                     <div className="ContactImageFrame">
@@ -16,16 +16,16 @@ function Contact() {
                     </div>
                     <div className="ContactTextBox">
                         <h4 className="w_2">이메일</h4>
-                        <h1>rbsys@gmail.com</h1>
+                        <h1>tyalitari@gmail.com</h1>
                     </div>
                 </div>
                 <div className="ContactBoxFrame">
                     <div className="ContactImageFrame">
-                        <img src={PhoneImage} alt="이메일" />
+                        <img src={PhoneImage} alt="전화번호" />
                     </div>
                     <div className="ContactTextBox">
                         <h4 className="w_2">전화번호</h4>
-                        <h1>010-1234-5678</h1>
+                        <h1>010-8348-1218</h1>
                     </div>
                 </div>
                 

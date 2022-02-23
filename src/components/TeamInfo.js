@@ -19,7 +19,6 @@ function TeamInfo({YoutubeLink}) {
                 <div className="TeamInfoText">
                     <h1>라디오드라마를 제작하며,<br /><span className="HighLight">‘성우’</span>를 양성하는 곳.</h1>
                     <div className="TagBox">
-                        <div className="Tag">#동아리</div>
                         <div className="Tag">#Youtube</div>
                         <div className="Tag">#행사</div>
                         <div className="Tag">#강좌</div>

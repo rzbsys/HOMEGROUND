@@ -19,8 +19,6 @@ function YoutubeModal({SetIsModelOpen, ModalInfo}) {
         document.body.style.overflow = "hidden";
         ModalRef.current.classList.remove("CloseModal");
         ModalRef.current.style.overflow = "auto";
-        return () => {
-        }
     }, []);
 
     return (
@@ -36,7 +34,7 @@ function YoutubeModal({SetIsModelOpen, ModalInfo}) {
                 <h1>{ModalInfo[0]}</h1>
                 <div className="CustomHR"></div>
                 <h4 className="UploadDate">{ModalInfo[1]}</h4>
-                <p>{ModalInfo[2]})</p>
+                <p>{ModalInfo[2]}</p>
             </div>
         </div>
     )
