@@ -41,7 +41,10 @@ function MemberModal({ SetIsMemberModalOpen, MemberModalInfo }) {
                 <img src={CloseBtn} alt="CloseBtn" />
             </div>
             <div className="YoutubeVideo MemberProfile" style={{ backgroundColor: MemberModalInfo["Color"] }}>
-                <img src={MemberModalInfo["Image"]} alt="" onError={(e) => { e.target.src = ErrImage; e.target.style["marginTop"] = "0px"; }} />
+                {MemberModalInfo["Image"]
+                    ? <img src={`https://cdn.jsdelivr.net/gh/zawook/hgweb@master/PeridotStudio/MemberImage/${MemberModalInfo["Image"].replaceAll(" ", "%20")}`} alt="" onError={(e) => { e.target.src = ErrImage; e.target.style["marginTop"] = "0px"; }} />
+                    : <img src={ErrImage} alt="" style={{marginTop:"0px"}}/>
+                }
             </div>
             <br />
             <div className="YoutubeText MemberModalText">

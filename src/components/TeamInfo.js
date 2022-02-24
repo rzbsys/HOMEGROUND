@@ -5,7 +5,7 @@ import Logo from "images/logo300.png";
 import Youtube from "images/youtube.png";
 
 
-function TeamInfo({YoutubeLink}) {
+function TeamInfo() {
     return (
         <>
             <Title KorTitle="팀 소개" EngTitle="Team Infomation"></Title>
@@ -23,7 +23,7 @@ function TeamInfo({YoutubeLink}) {
                         <div className="Tag">#행사</div>
                         <div className="Tag">#강좌</div>
                     </div>
-                    <div className="Youtube" onClick={() => {window.open(YoutubeLink, "_blank")}}>
+                    <div className="Youtube" onClick={() => {window.open("https://www.youtube.com/channel/UCEkO64sYQRgwhH63HgOxjkw", "_blank")}}>
                         <img src={Youtube} alt="Youtube" height="50px" />
                         <h4>유튜브 바로가기</h4>
                     </div>

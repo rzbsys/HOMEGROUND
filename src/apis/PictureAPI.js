@@ -13,13 +13,5 @@ import Image11 from "images/image 11.png";
 import Image12 from "images/image 12.png";
 import Image13 from "images/image 13.png";
 
-// 프로필 사진
-import {성우부, 운영진, 일러부, 작가연출부, 작곡음향, 트레이너} from "./Member";
-
-
 const ImageList = [Image1, Image2, Image3, Image4, Image5, Image6, Image7, Image8, Image9, Image10, Image11, Image12, Image13];
-const MemberList = [운영진, 트레이너, 성우부, 일러부, 작가연출부, 작곡음향];
-
-
-const YoutubeLink = "https://www.youtube.com/channel/UCEkO64sYQRgwhH63HgOxjkw";
-export { ImageList, MemberList, YoutubeLink };
+export default ImageList;

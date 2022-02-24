@@ -9,10 +9,13 @@ import Footer from "components/Footer";
 import Contact from "components/Contact";
 import YoutubeModal from "components/YoutubeModal";
 import MemberModal from "components/MemberModal";
+
 import "styles/Animation.scss";
 import { AnimationOnScroll } from 'react-animation-on-scroll';
-import { GetYoutubeVideos } from "apis/YoutubeAPI";
-import { ImageList, MemberList, YoutubeLink } from "apis/PeridotStudio";
+
+import GetYoutubeVideos from "apis/YoutubeAPI";
+import ImageList from "apis/PictureAPI";
+import GetMemberInfo from "apis/MemberAPI";
 
 
 function PeridotStudio() {
@@ -45,12 +48,12 @@ function PeridotStudio() {
             </Section>
 
             <AnimationOnScroll animateIn="fadeInDown" offset={100}>
-                <TeamInfo YoutubeLink={YoutubeLink}></TeamInfo>
+                <TeamInfo></TeamInfo>
             </AnimationOnScroll>
             <hr />
 
             <AnimationOnScroll animateIn="fadeInDown" offset={100}>
-                <MemberInfo SetIsMemberModalOpen={SetIsMemberModalOpen} SetMemberModalInfo={SetMemberModalInfo} MemberList={MemberList}></MemberInfo>
+                <MemberInfo GetMemberInfo={GetMemberInfo} SetIsMemberModalOpen={SetIsMemberModalOpen} SetMemberModalInfo={SetMemberModalInfo}></MemberInfo>
             </AnimationOnScroll>
             
             <hr />
