@@ -8,8 +8,8 @@
 
 // 모바일
 @media (min-width: 320px) and (max-width: 480px) {
-    .Section > h1 {
-        font-size: 20px;
+    .Section > div > h1 {
+        font-size: 6vw;
     }
 
     .Section {

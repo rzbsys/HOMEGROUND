@@ -23,25 +23,25 @@ const 운영진 = [
         "Position": "대표",
         "Image": Image14,
         "Color": "#FED3E7",
-        "Detail": ["세부정보 없음"],
+        "NotionPage":"e0712e9d00094739989b8d59dda064b9"
     }, {
         "Name": "마르크",
         "Position": "부대표",
         "Image": Image15,
         "Color": "#430505",
-        "Detail": ["성우부분 최고 책임자", "성우부 트레이너"],
+        "NotionPage":"",
     }, {
         "Name": "희날",
         "Position": "성우부 매니저",
         "Image": Image16,
         "Color": "#9AD8C3",
-        "Detail": ["세부정보 없음"],
+        "NotionPage":"",
     }, {
         "Name": "희날",
         "Position": "성우부 매니저",
         "Image": "",
         "Color": "",
-        "Detail": ["세부정보 없음"],
+        "NotionPage":"",
     }];
 
 
@@ -51,25 +51,25 @@ const 트레이너 = [
         "Position": "성우 트레이너",
         "Image": Image17,
         "Color": "#B2C5FF",
-        "Detail": ["세부정보 없음"],
+        "NotionPage":"",
     }, {
         "Name": "로쿠",
         "Position": "성우 트레이너",
         "Image": Image18,
         "Color": "#8AF5BF",
-        "Detail": ["세부정보 없음"],
+        "NotionPage":"",
     }, {
         "Name": "청",
         "Position": "성우 트레이너",
         "Image": "",
         "Color": "",
-        "Detail": ["세부정보 없음"],
+        "NotionPage":"",
     }, {
         "Name": "장민지",
         "Position": "성우 트레이너",
         "Image": "",
         "Color": "",
-        "Detail": ["세부정보 없음"],
+        "NotionPage":"",
     }];
 
 const 성우부 = [
@@ -78,43 +78,43 @@ const 성우부 = [
         "Position": "성우부",
         "Image": Image19,
         "Color": "",
-        "Detail": ["세부정보 없음"],
+        "NotionPage":"",
     }, {
         "Name": "글리민",
         "Position": "성우부",
         "Image": Image20,
         "Color": "#E0F58A",
-        "Detail": ["세부정보 없음"],
+        "NotionPage":"",
     }, {
         "Name": "뭉멍",
         "Position": "성우부",
         "Image": Image21,
         "Color": "",
-        "Detail": ["세부정보 없음"],
+        "NotionPage":"",
     }, {
         "Name": "슈비두밥",
         "Position": "성우부",
         "Image": Image22,
         "Color": "#9AD8C5",
-        "Detail": ["세부정보 없음"],
+        "NotionPage":"",
     }, {
         "Name": "키엘",
         "Position": "성우부",
         "Image": Image23,
         "Color": "#B2C5FF",
-        "Detail": ["세부정보 없음"],
+        "NotionPage":"",
     }, {
         "Name": "복치",
         "Position": "성우부",
         "Image": Image24,
         "Color": "#FCAAA7",
-        "Detail": ["세부정보 없음"],
+        "NotionPage":"",
     }, {
         "Name": "청명",
         "Position": "성우부",
         "Image": "",
         "Color": "",
-        "Detail": ["세부정보 없음"],
+        "NotionPage":"",
     }];
 
 
@@ -124,43 +124,43 @@ const 일러부 = [
         "Position": "일러부",
         "Image": Image25,
         "Color": "",
-        "Detail": ["세부정보 없음"],
+        "NotionPage":"",
     }, {
         "Name": "이마레",
         "Position": "일러부",
         "Image": Image26,
         "Color": "",
-        "Detail": ["세부정보 없음"],
+        "NotionPage":"",
     }, {
         "Name": "이빈",
         "Position": "일러부",
         "Image": Image27,
         "Color": "",
-        "Detail": ["세부정보 없음"],
+        "NotionPage":"",
     }, {
         "Name": "LAN",
         "Position": "일러부",
         "Image": Image28,
         "Color": "",
-        "Detail": ["세부정보 없음"],
+        "NotionPage":"",
     }, {
         "Name": "여울",
         "Position": "일러부",
         "Image": Image29,
         "Color": "",
-        "Detail": ["이메일 : garden2wind@gmail.com"],
+        "NotionPage":"",
     }, {
         "Name": "하숭",
         "Position": "일러부",
         "Image": "",
         "Color": "",
-        "Detail": ["세부정보 없음"],
+        "NotionPage":"",
     }, {
         "Name": "유",
         "Position": "일러부",
         "Image": "",
         "Color": "",
-        "Detail": ["세부정보 없음"],
+        "NotionPage":"",
     }];
 
 const 작가연출부 = [{
@@ -168,19 +168,19 @@ const 작가연출부 = [{
     "Position": "작가/연출부",
     "Image": Image30,
     "Color": "#C7EBFF",
-    "Detail": ["세부정보 없음"],
+    "NotionPage":"",
 }, {
     "Name": "진니",
     "Position": "작가/연출부",
     "Image": "",
     "Color": "",
-    "Detail": ["세부정보 없음"],
+    "NotionPage":"",
 }, {
     "Name": "박가람",
     "Position": "작가/연출부",
     "Image": "",
     "Color": "",
-    "Detail": ["이메일 : 756cjs@gmail.com"],
+    "NotionPage":"",
 }];
 
 
@@ -189,7 +189,7 @@ const 작곡음향 = [{
     "Position": "작곡/음향",
     "Image": "",
     "Color": "",
-    "Detail": ["세부정보 없음"],
+    "NotionPage":"",
 }];
 
 

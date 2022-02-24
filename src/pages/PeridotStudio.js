@@ -8,14 +8,18 @@ import Activities from "components/Activities";
 import Footer from "components/Footer";
 import Contact from "components/Contact";
 import YoutubeModal from "components/YoutubeModal";
+import MemberModal from "components/MemberModal";
 import "styles/Animation.scss";
 import { AnimationOnScroll } from 'react-animation-on-scroll';
 import { GetYoutubeVideos } from "apis/YoutubeAPI";
 import { ImageList, MemberList, YoutubeLink } from "apis/PeridotStudio";
 
+
 function PeridotStudio() {
     const [IsModelOpen, SetIsModelOpen] = useState(false);
-    const [ModalInfo, SetModalInfo] = useState([]);
+    const [VideoModalInfo, SetModalInfo] = useState([]);
+    const [MemberModalInfo, SetMemberModalInfo] = useState([]);
+    const [IsMemberModalOpen, SetIsMemberModalOpen] = useState(false);
     return (
         <>
             <NavBar></NavBar>
@@ -46,7 +50,7 @@ function PeridotStudio() {
             <hr />
 
             <AnimationOnScroll animateIn="fadeInDown" offset={100}>
-                <MemberInfo MemberList={MemberList}></MemberInfo>
+                <MemberInfo SetIsMemberModalOpen={SetIsMemberModalOpen} SetMemberModalInfo={SetMemberModalInfo} MemberList={MemberList}></MemberInfo>
             </AnimationOnScroll>
             
             <hr />
@@ -61,7 +65,10 @@ function PeridotStudio() {
             
             <Footer></Footer>
             {IsModelOpen
-                && <YoutubeModal SetIsModelOpen={SetIsModelOpen} ModalInfo={ModalInfo}></YoutubeModal>
+                && <YoutubeModal SetIsModelOpen={SetIsModelOpen} VideoModalInfo={VideoModalInfo}></YoutubeModal>
+            }
+            {IsMemberModalOpen
+                && <MemberModal SetIsMemberModalOpen={SetIsMemberModalOpen} MemberModalInfo={MemberModalInfo}></MemberModal>
             }
         </>
     )

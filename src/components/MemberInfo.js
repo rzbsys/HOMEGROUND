@@ -5,9 +5,15 @@ import ErrImage from "images/ready.png";
 import Selector from "./Selector";
 
 
-function Member({ data }) {
+function Member({ data, SetMemberModalInfo, SetIsMemberModalOpen }) {
+    function MemberOnclick() {
+        SetIsMemberModalOpen(true);
+        SetMemberModalInfo(data);
+        
+    }
+    
     return (
-        <div className="Member">
+        <div className="Member" onClick={MemberOnclick}>
             <div className="MemberProfileImage" style={{ backgroundColor: data["Color"] }}>
                 <img src={data["Image"]} alt="이미지 없음" onError={(e) => { e.target.src = ErrImage; e.target.style["marginTop"] = "0px"; }} />
             </div>
@@ -20,10 +26,10 @@ function Member({ data }) {
 }
 
 
-function MemberInfo({ MemberList }) {
+function MemberInfo({ MemberList, SetMemberModalInfo, SetIsMemberModalOpen }) {
 
     const [ViewPart, SetViewPart] = useState(0);
-
+    
 
     return (
         <>
@@ -33,7 +39,7 @@ function MemberInfo({ MemberList }) {
             <div className="MemberInfoGrid">
                 {MemberList[ViewPart].map((data, index) => {
                     return (
-                        <Member key={ViewPart+index} data={data}></Member>
+                        <Member key={ViewPart+index} data={data} SetMemberModalInfo={SetMemberModalInfo} SetIsMemberModalOpen={SetIsMemberModalOpen}></Member>
                     )
                 })}
 

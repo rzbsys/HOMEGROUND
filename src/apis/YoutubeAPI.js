@@ -11,9 +11,7 @@ async function GetYoutubeVideos(NextPageToken, PlayListID) {
         qstring += `&pageToken=${NextPageToken}`;   
     }
     const Respond = await axios.get(qstring);
-    console.log(Respond);
-    console.log(qstring);
-    return {item:Respond.data.items, PageToken:Respond.data.nextPageToken};
+    return {item:Respond.data.items, PageToken:Respond.data.nextPageToken, MaxPage:parseInt(Respond.data.pageInfo.totalResults / Respond.data.pageInfo.resultsPerPage) + 1};
 }
 
 
