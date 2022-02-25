@@ -1,0 +1,180 @@
+.MemberInfoSelector{
+    width: 100%;
+    white-space: nowrap;
+    padding: 20px 0px;
+    overflow-x: scroll;
+    margin-top: 20px;
+    position: relative;
+}
+
+fieldset {
+    border: 0px;
+}
+
+.MemberInfoSelector::-webkit-scrollbar {
+    display: none;
+}
+
+input[type="radio"] { 
+    display: none;
+}
+
+input[type="radio"]:checked + .MemberSelText {
+    background-color: #EAEAEA;
+}
+
+.MemberSelText {
+    font-size: 18px;
+    padding: 5px 30px;
+    border-radius: 100px;
+    margin: 10px 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.Member {
+    display: flex;
+    flex-direction: row;
+}
+
+.MemberSelText:first-of-type {
+    margin-left: 25vw;
+}
+
+.MemberSelText:last-of-type {
+    margin-right: 25vw;
+}
+
+.MemberInfoSelectorShadow {
+    width: 20vw;
+    height: 40px;
+    position: absolute;
+    margin-top: -52px;
+}
+
+.MemberInfoSelectorLeftShadow {
+    @extend .MemberInfoSelectorShadow;
+    background:linear-gradient(to right, rgba(255, 255,255, 1), rgba(255, 255,255, 0.8), rgba(255, 255,255, 0));
+    left: 0px;
+}
+
+.MemberInfoSelectorRightShadow {
+    @extend .MemberInfoSelectorShadow;
+    background:linear-gradient(to right, rgba(255, 255,255, 0), rgba(255, 255,255, 0.8), rgba(255, 255,255, 1));
+
+    right: 0px;
+}
+
+
+
+
+.MemberInfoGrid {
+    // width: calc(100% - 300px);
+    position: relative;
+    // left: 50%;
+    // margin-left: calc(-1 * (100% - 300px) / 2);
+    width: 80vw;
+    margin-left: 12vw;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 30px;
+    grid-column-gap: 30px;
+    grid-row-gap: 70px !important;
+    margin-bottom: 80px;
+}
+
+.MemberInfoGrid > h1 {
+    white-space: nowrap;
+}
+
+
+.MemberProfileImage {
+    width: 140px;
+    height: 140px;
+    border-radius: 100px;
+    overflow: hidden;
+    background-color: #E5E5E5;
+    box-shadow: 0px 0px 20px -5px rgba(230, 230, 230, 1);
+}
+
+.MemberProfileImage > img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+
+.Member {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    cursor: pointer;
+}
+
+.MemberText {
+    display: flex;
+    flex-direction: column;
+}
+
+.MemberText > h4 {
+    color: #818181;
+}
+
+.MemberText > h1 {
+    font-size: 45px;
+    white-space: nowrap;
+}
+
+// 태블릿
+@media (min-width: 768px) and (max-width: 1024px) {
+    .MemberInfoGrid {
+        grid-template-columns: repeat(2, 1fr);
+        width: calc(100% - 100px);
+        margin-left: calc(-1 * (100% - 100px) / 2);
+        left: 50%;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+
+    .MemberInfoSelector {
+        margin: 0px;
+    }
+
+    .MemberSelText {
+        font-size: 15px;
+        padding: 5px 20px;
+        margin: 0px;
+    }
+
+    .MemberSelText:first-of-type {
+        margin-left: 50px;
+    }
+    
+    .MemberSelText:last-of-type {
+        margin-right: 50px;
+    }
+
+    .MemberInfoGrid {
+        grid-template-columns: 1fr;
+        width: calc(100% - 20px);
+        left: 10px;
+        margin-left: 0px;
+        margin-top: 10px;
+        grid-row-gap: 10px !important;
+        margin-bottom: 20px;
+    }
+
+    .Member {
+        transform: scale(0.8);
+        
+    }
+
+    .MemberText {
+        h1 {
+            font-size: 40px;
+        }
+    }
+    
+}

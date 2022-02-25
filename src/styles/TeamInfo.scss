@@ -1,0 +1,86 @@
+@import "styles/common.scss";
+
+
+.TeamInfoFrame {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15%;
+    margin: 80px 0px;
+}
+
+.TeamInfoLogo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    img {
+        margin-bottom: 20px;
+    }
+}
+
+.TeamInfoLogo > h2 {
+    color: #A9A9A9;
+}
+
+.TeamInfoText {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.HighLight {
+    background: linear-gradient(to top, $MainColor 50%, transparent 50%);
+}
+
+.TagBox {
+    max-width: 300px;
+}
+
+.Tag {
+    padding: 8px 30px;
+    display: inline-block;
+    background-color: #F5F5F5;
+    color: #646464;
+    border-radius: 100px;
+    margin-top: 8px;
+    margin-left: 8px;
+}
+
+.Youtube {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.Youtube > h4 {
+    color: #FC3832;
+}
+
+// 모바일
+@media (min-width: 320px) and (max-width: 480px) {
+    .TeamInfoFrame {
+        flex-direction: column;
+        gap: 20px;
+        margin-top: 0px;
+        margin-bottom: 20px;
+    }
+
+    .TeamInfoText {
+        align-items: center;
+        text-align: center;
+        width: 80%;
+    }
+
+    .TeamInfoText > h1 {
+        font-size: 20px;
+    }
+
+    .TagBox > .Tag {
+        font-size: 15px;
+    }
+
+    .TeamInfoLogo {
+        transform: scale(0.8);
+    }
+}

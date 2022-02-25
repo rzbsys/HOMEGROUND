@@ -1,0 +1,94 @@
+@import "styles/common.scss";
+
+.TopBackground {
+    width: 100%;
+    height: 110vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.TopBackgroundLine {
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+    gap: 30px;
+    img {
+        width: 300px;
+        height: 180px;
+    }
+}
+
+
+.AboutUsButton {
+    cursor: pointer;
+    width: 180px;
+    height: 55px;
+    font-size: 20px;
+    border-radius: 100px;
+    border: 0px;
+    background-color: $MainColor;
+    color: white;
+}
+
+
+.TopBackgroundFrame {
+    transform: rotate(-10deg);
+    margin-top: 100px;
+}
+
+.TopBackgroundLine:nth-child(2) {
+    transform: translateX(160px);
+}
+
+.TopBackgroundLine:nth-child(3) {
+    transform: translateX(-160px);
+}
+
+.TopBackgroundWhiteShadow {
+    width: 100%;
+    height: 80vh;
+    bottom: 0px;
+    position: absolute;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 1));
+}
+
+.TopBackgroundTitle {
+    position: absolute;
+    font-size: 4rem;
+    bottom: 20vh;
+    left: 60px;
+}
+
+// 태블릿
+@media (min-width: 768px) and (max-width: 1024px) {
+    .TopBackgroundTitle {
+        font-size: 60px;
+        bottom: 200px;
+    }
+}
+
+
+// 모바일
+@media (min-width: 320px) and (max-width: 480px) {
+    .TopBackgroundTitle {
+        font-size: 8vw;
+        left: 20px;
+        bottom: 80px;
+        button {
+            margin-top: 20px;
+            width: 120px;
+            height: 40px;
+            font-size: 13px;
+            font-weight: 500;
+        }
+    }
+
+    .TopBackgroundFrame {
+        transform: scale(0.7) rotate(-10deg) translateX(-80vw);
+        margin-top: -40px;
+    }
+    .TopBackground {
+        height: 100vh;
+    }
+}
+

@@ -1,0 +1,12 @@
+// @import "styles/common.scss";
+
+
+$MainColor : #52E18E;
+
+// $MainColor : linear-gradient(45deg, #FAFA52, #B4E2C2);
+
+@for $i from 1 to 6 {
+    .w_#{$i}{
+        font-weight: (($i * 2) - 1) * 100;
+    }
+}

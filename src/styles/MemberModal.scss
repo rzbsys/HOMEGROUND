@@ -1,0 +1,35 @@
+.MemberProfile {
+    border-radius: 100%;
+    width: 200px;
+    height:  200px;
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+}
+
+.MemberNotion * {
+    color: white;
+}
+
+.MemberNotion img {
+    transform: scale(0.7);
+}  
+
+.MemberModalText > h1{
+    font-size: 30px;
+    margin-top: -10px;
+}
+
+.NotionNotFound {
+    text-align: center;
+    color: rgb(100, 100, 100);
+    margin-bottom: 50px;
+}
+
+.Imoticon {
+    margin-top: 50px;
+    font-size: 60px;
+    text-align: center;
+}
