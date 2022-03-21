@@ -1,0 +1,18 @@
+.Section {
+    width: 100%;
+    padding: 80px 0px;
+    background-color: #FAFAFA;
+    text-align: center;
+}
+
+
+// 모바일
+@media (min-width: 320px) and (max-width: 480px) {
+    .Section > div > h1 {
+        font-size: 6vw;
+    }
+
+    .Section {
+        padding: 50px 0px;
+    }
+}

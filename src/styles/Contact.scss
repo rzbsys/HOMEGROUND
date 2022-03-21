@@ -1,0 +1,80 @@
+.ContactBox {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 80px;
+    justify-content: space-around;
+}
+
+.ContactImageFrame {
+    width: 130px;
+    height: 130px;
+    border-radius: 100px;
+    background-color: rgb(250, 250, 250);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ContactImageFrame > img {
+    width: 50%;
+}
+
+.ContactBoxFrame {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+.ContactTextBox > h2 {
+    color: #747474;
+}
+
+
+// 태블릿
+@media (min-width: 768px) and (max-width: 1024px) {
+    .ContactBox {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .ContactBoxFrame {
+        width: 400px;
+    }
+
+    .ContactImageFrame {
+        width: 100px;
+        height: 100px;
+    }
+
+    .ContactTextBox > h1 {
+        font-size: 25px;
+    }   
+}
+
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .ContactBox {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        justify-content: center;
+    }
+
+    .ContactBoxFrame {
+        width: calc(100% - 30px);
+        margin-left: 30px;
+    }
+
+    .ContactImageFrame {
+        width: 70px;
+        height: 70px;
+    }
+
+    .ContactTextBox > h1 {
+        font-size: 18px;
+    }   
+
+
+}

@@ -1,0 +1,7 @@
+$MainColor : #40CD85;
+
+@for $i from 1 to 6 {
+    .w_#{$i}{
+        font-weight: (($i * 2) - 1) * 100;
+    }
+}
