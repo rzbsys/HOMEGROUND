@@ -22,6 +22,8 @@ function TeamInfo() {
                         <div className="Tag">#Youtube</div>
                         <div className="Tag">#행사</div>
                         <div className="Tag">#강좌</div>
+                        <div className="Tag">#양성</div>
+                        <div className="Tag">#오디오북</div>
                     </div>
                     <div className="Youtube" onClick={() => {window.open("https://www.youtube.com/channel/UCEkO64sYQRgwhH63HgOxjkw", "_blank")}}>
                         <img src={Youtube} alt="Youtube" height="50px" />
